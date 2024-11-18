@@ -27,7 +27,8 @@
 		{
 			"name": "Mac",
 			"includePath": [
-				"${vex_sdkIncludes}"
+				"${vex_sdkIncludes}",
+				"/Users/davis.miller/Documents/vex-vscode-projects/Robot/**"
 			],
 			"compilerPath": "${vex_compilerPath}",
 			"cStandard": "gnu99",
