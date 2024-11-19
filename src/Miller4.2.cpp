@@ -17,7 +17,7 @@ void print(string text) {
 }
 //Raises arm to a 160 degree angle
 void raise() {
-  armMotor.spinFor(180, degrees);
+  armMotor.spinFor(360, degrees);
 }
 //Lowers arm from a 160 degree angle
 void lower() {
@@ -40,16 +40,17 @@ int main() {
     Drive.driveFor(40, inches);
     //redundant stop of robot motion 
     Drive.stop();
+    wait(3, seconds);
     //Closes claw to grab object
-    clawMotor.spinFor(120, degrees);
+    clawMotor.spinFor(140, degrees);
     //Adds wait time to allow claw to close
     wait(1, seconds);
     //Raises claw
     raise();
     //Full spin to turn around, using 135º from 4.1 due to robot processing errors
-    Drive.turnFor(right, 135, degrees);
+    Drive.turnFor(right, 125, degrees);
     //Drives forward to return to starting position
-    Drive.driveFor(40, inches);
+    Drive.driveFor(45, inches);
     //Opens claw to drop ball
     open();
 }
