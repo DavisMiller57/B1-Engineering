@@ -8,13 +8,13 @@ using namespace vex;
 //Main program logic - Autonomous Retrial
 int main() {
     //Sets claw open prior to leaving starting position
-    open();
+    clawMotor.spinFor(reverse, 360, degrees);
     //Drives foward just over 3 feet to account for any error
     Drive.driveFor(40, inches);
     //redundant stop of robot motion 
     Drive.stop();
     //Closes claw to grab object
-    close();
+    clawMotor.spinFor(250, degrees);
     //Adds wait time to allow claw to close
     wait(1, seconds);
     //Raises claw
