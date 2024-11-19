@@ -29,7 +29,7 @@ void open() {
 }
 //Closes claw from 160 degree angle
 void close() {
-  clawMotor.spinFor(160, degrees);
+  clawMotor.spinFor(165, degrees);
 }
 //Main program logic - Autonomous Retrial
 int main() {
