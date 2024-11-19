@@ -17,7 +17,7 @@ void print(string text) {
 }
 //Raises arm to a 160 degree angle
 void raise() {
-  armMotor.spinFor(160, degrees);
+  armMotor.spinFor(180, degrees);
 }
 //Lowers arm from a 160 degree angle
 void lower() {
@@ -35,13 +35,13 @@ void close() {
 //Main program logic - Autonomous Retrial
 int main() {
     //Sets claw open prior to leaving starting position
-    clawMotor.spinFor(reverse, 360, degrees);
+    clawMotor.spinFor(reverse, 180, degrees);
     //Drives foward just over 3 feet to account for any error
     Drive.driveFor(40, inches);
     //redundant stop of robot motion 
     Drive.stop();
     //Closes claw to grab object
-    clawMotor.spinFor(250, degrees);
+    clawMotor.spinFor(120, degrees);
     //Adds wait time to allow claw to close
     wait(1, seconds);
     //Raises claw
