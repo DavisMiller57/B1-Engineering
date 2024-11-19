@@ -31,7 +31,7 @@
                 "/Users/davis.miller/Documents/vex-vscode-projects/Robot/**",
                 "${workspaceFolder}/include"
             ],
-            "compilerPath": "${vex_compilerPath}",
+            "compilerPath": "/Users/davis.miller/Documents/vex-vscode-projects/Robot",
             "cStandard": "gnu99",
             "cppStandard": "gnu++11",
             "intelliSenseMode": "macos-clang-x86"
