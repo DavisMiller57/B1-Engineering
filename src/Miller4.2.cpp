@@ -15,6 +15,8 @@ int main() {
     Drive.stop();
     //Closes claw to grab object
     close();
+    //Adds wait time to allow claw to close
+    wait(1, seconds);
     //Raises claw
     raise();
     //Full spin to turn around, using 135º from 4.1 due to robot processing errors
