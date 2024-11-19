@@ -1,6 +1,5 @@
 #include "vex.h"
 #include <string>
-#include "lib.cpp"
 using std::string;
 using namespace vex;
 
