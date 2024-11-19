@@ -16,11 +16,11 @@ All Programs are located inside the [/src/](https://github.com/DavisMiller57/B1-
 
 
 ## Vex V5 Objects
-| Type | Port | Description | Name |
-| ----------- | ----------- | ----------- | ----------- | 
-| Drivetrain | 1, 10 | 2 Motor Drivetrain | Drive
-| Motor | 1 | Left Drivetrain Motor| leftMotor |
-| Motor | 10 | Right Drivetrain Motor| rightMotor |
-| Motor | 8 | Arm Movement Motor | armMotor |
-| Motor | 3 | Claw Movement Motor | clawMotor
-| Controller | n/a | Controller for Input | Controller |
+| Type | Port | Description | Name | Constructor |
+| ----------- | ----------- | ----------- | ----------- | ----------- | 
+| Drivetrain | 1, 10 | 2 Motor Drivetrain | Drive | `drivetrain Drive = drivetrain(left_motor, right_motor, 259.34, 320, 40, mm, 1);` |
+| Motor | 1 | Left Drivetrain Motor| leftMotor | `motor left_motor = motor(PORT1, false);` |
+| Motor | 10 | Right Drivetrain Motor| rightMotor | `motor right_motor = motor(PORT10, true);` |
+| Motor | 8 | Arm Movement Motor | armMotor | `motor armMotor = motor(PORT8, ratio18_1, false); ` |
+| Motor | 3 | Claw Movement Motor | clawMotor | `motor clawMotor = motor(PORT3, ratio18_1, false);` |
+| Controller | n/a | Controller for Input | Controller | `controller Controller = controller();` |
