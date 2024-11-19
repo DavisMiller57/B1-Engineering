@@ -21,8 +21,8 @@ int main() {
     raise();
     //Full spin to turn around, using 135º from 4.1 due to robot processing errors
     Drive.turnFor(right, 135, degrees);
-    //Drives forward to return to starting position, adding on 4 inches to account for error
-    Drive.driveFor(44, inches);
+    //Drives forward to return to starting position
+    Drive.driveFor(40, inches);
     //Opens claw to drop ball
     open();
 }
