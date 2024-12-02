@@ -11,6 +11,7 @@ motor left_motor = motor(PORT1, false);
 motor right_motor = motor(PORT10, true);
 drivetrain Drive = drivetrain(left_motor, right_motor, 259.34, 320, 40, mm, 1);
 bumper bumperA = bumper(Brain.ThreeWirePort.A);
+brain Brain;
 
 //Simple print method to print a string to the brain screen
 void print(string text) {
