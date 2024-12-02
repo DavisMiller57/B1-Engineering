@@ -13,6 +13,7 @@ All Programs are located inside the [/src/](https://github.com/DavisMiller57/B1-
 | lib.txt | Library | Library of shared methods and constructors used in all programs |
 |Miller4.1 | First Program in VEXCode V5 | Clockwise 12" box then coiunterclockwise 12" box |
 | Miller4.2 | Autonomous Retrieval | Drives 3' Foward to pick up ball and return to basket at starting area |
+| Miller4.3 | Incorporating an Event | Drive backward until bumper switch, drive foward, raise/lower arm, open/close claw |
 
 
 ## Vex V5 Objects
