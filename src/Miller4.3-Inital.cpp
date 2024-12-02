@@ -23,7 +23,7 @@ void raise() {
 }
 //Lowers arm from a 160 degree angle
 void lower() {
-  armMotor.spinFor(reverse, 160, degrees);
+  armMotor.spinFor(reverse, 360, degrees);
 }
 //Opens claw to a 160 degree angle
 void open() {
