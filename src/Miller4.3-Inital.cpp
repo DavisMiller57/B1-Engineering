@@ -10,6 +10,7 @@ controller Controller = controller();
 motor left_motor = motor(PORT1, false);
 motor right_motor = motor(PORT10, true);
 drivetrain Drive = drivetrain(left_motor, right_motor, 259.34, 320, 40, mm, 1);
+bumper bumperA = bumper(Brain.ThreeWirePort.A);
 
 //Simple print method to print a string to the brain screen
 void print(string text) {
@@ -25,13 +26,27 @@ void lower() {
 }
 //Opens claw to a 160 degree angle
 void open() {
-  clawMotor.spinFor(reverse, 160, degrees);
+  clawMotor.spinFor(reverse, 140, degrees);
 }
 //Closes claw from 160 degree angle
 void close() {
-    clawMotor.spinFor(160, degrees);
+    clawMotor.spinFor(140, degrees);
 }
 
 int main () {
-    
+    while(bumperA.pressing() == 0) {
+        Drive.drive(reverse);
+    }
+    Drive.stop();
+    Drive.driveFor(4, inches);
+    Drive.stop();
+    wait(1, seconds);
+    Drive.turnFor(180, degrees);
+    raise();
+    wait(1, seconds);
+    lower();
+    wait(1, seconds);
+    open();
+    wait(1, seconds);
+    close();
 }
