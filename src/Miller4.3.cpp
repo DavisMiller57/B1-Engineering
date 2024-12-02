@@ -44,7 +44,7 @@ int main () {
     Drive.driveFor(4, inches);
     Drive.stop();
     wait(1, seconds);
-    //Turns 180 degrees and raises/lowers arm and opens/closes claw
+    //Turns 180 degrees and raises/lowers arm and opens/closes claw CHANGE FROM INITIAL - Angle to 120
     Drive.turnFor(120, degrees);
     raise();
     wait(1, seconds);
