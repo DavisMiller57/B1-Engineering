@@ -15,8 +15,7 @@ bumper bumperA = bumper(Brain.ThreeWirePort.A);
 
 //Variable that determines if the robot is in panic mode
 bool panic = false;
-
-    bool kill = false;
+bool kill = false;
     
 //Simple print method to print a string to the brain screen
 void print(string text) {
@@ -90,9 +89,6 @@ void btnY() {
 //drives in a box until button X is pressed
 void btnX() {
     while(kill == false){
-        if(Controller.ButtonX.pressing()) {
-            kill = true;
-        }
         for(int i = 0; i <= 4; i++) {
             Drive.driveFor(12, inches);
             Drive.stop();
@@ -100,6 +96,9 @@ void btnX() {
             Drive.turnFor(right, 65, degrees);
             Drive.stop();
             wait1();
+        }
+        if(Controller.ButtonX.pressing()) {
+        kill = true;
         }
     }
 }
