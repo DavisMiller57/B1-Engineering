@@ -41,6 +41,20 @@ void wait1() {
     wait(1, seconds);
 }
 
+//Bumper Hit
+void bumperHit() {
+    Drive.stop();
+    wait(1, seconds);
+    //Turns 180 degrees and raises/lowers arm and opens/closes claw CHANGE FROM INITIAL - Angle to 120
+    Drive.turnFor(120, degrees);
+    raise();
+    wait(1, seconds);
+    lower();
+    wait(1, seconds);
+    open();
+    wait(1, seconds);
+    close();
+}
 
 //Drives foward, turns around and drives back
 void btnA() {
@@ -92,20 +106,6 @@ void btnX() {
 void btnR1() {
     panic = true;
     Drive.stop();
-}
-//Bumper Hit
-void bumperHit() {
-    Drive.stop();
-    wait(1, seconds);
-    //Turns 180 degrees and raises/lowers arm and opens/closes claw CHANGE FROM INITIAL - Angle to 120
-    Drive.turnFor(120, degrees);
-    raise();
-    wait(1, seconds);
-    lower();
-    wait(1, seconds);
-    open();
-    wait(1, seconds);
-    close();
 }
 
 //loop while killswitch variable (panic) is false
