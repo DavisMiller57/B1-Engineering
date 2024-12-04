@@ -86,19 +86,34 @@ void btnY() {
     }
    }
 }
-//drives in a box until button X is pressed
+
+//drives in a box until button R1 is pressed
 void btnX() {
-    while(kill == false){
-        for(int i = 0; i <= 4; i++) {
-            Drive.driveFor(12, inches);
-            Drive.stop();
-            wait1();
-            Drive.turnFor(right, 65, degrees);
-            Drive.stop();
-            wait1();
+    while (true) {
+        for(int i = 0; i < 4; i++) {
+            if (Controller.ButtonR1.pressing()) {
+                Drivetrain.stop();
+                return;
+            }
+            Drivetrain.driveFor(12, inches);
+            Drivetrain.turnFor(right, 90, degrees);
         }
-        if(Controller.ButtonX.pressing()) {
-        kill = true;
+        if (Controller.ButtonR1.pressing()) {
+            Drivetrain.stop();
+            return;
+        }
+        Drivetrain.turnFor(right, 180, degrees);
+        for(int i = 0; i < 4; i++) {
+            if (Controller.ButtonR1.pressing()) {
+                Drivetrain.stop();
+                return;
+            }
+            Drivetrain.driveFor(12, inches);
+            Drivetrain.turnFor(left, 90, degrees);
+        }
+        if (Controller.ButtonR1.pressing()) {
+            Drivetrain.stop();
+            return;
         }
     }
 }
