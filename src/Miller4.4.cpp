@@ -92,27 +92,27 @@ void btnX() {
     while (true) {
         for(int i = 0; i < 4; i++) {
             if (Controller.ButtonR1.pressing()) {
-                Drivetrain.stop();
+                Drive.stop();
                 return;
             }
-            Drivetrain.driveFor(12, inches);
-            Drivetrain.turnFor(right, 90, degrees);
+            Drive.driveFor(12, inches);
+            Drive.turnFor(right, 90, degrees);
         }
         if (Controller.ButtonR1.pressing()) {
-            Drivetrain.stop();
+            Drive.stop();
             return;
         }
-        Drivetrain.turnFor(right, 180, degrees);
+        Drive.turnFor(right, 180, degrees);
         for(int i = 0; i < 4; i++) {
             if (Controller.ButtonR1.pressing()) {
-                Drivetrain.stop();
+                Drive.stop();
                 return;
             }
-            Drivetrain.driveFor(12, inches);
-            Drivetrain.turnFor(left, 90, degrees);
+            Drive.driveFor(12, inches);
+            Drive.turnFor(left, 90, degrees);
         }
         if (Controller.ButtonR1.pressing()) {
-            Drivetrain.stop();
+            Drive.stop();
             return;
         }
     }
