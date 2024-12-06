@@ -42,6 +42,14 @@ void wait1() {
     wait(1, seconds);
 }
 
+void eventHandler() {
+    Controller.ButtonA.pressed(btnA);
+    Controller.ButtonB.pressed(btnB);
+    Controller.ButtonY.pressed(btnY);
+    Controller.ButtonX.pressed(btnX);
+    Controller.ButtonL1.pressed(btnL1);
+}
+
 //Bumper Hit
 void bumperHit() {
     Drive.stop();
@@ -118,28 +126,13 @@ void btnX() {
     }
 }
 //sets panic variable to true, stopping main program flow, and stopping the robot
-void btnR1() {
-    panic = true;
-    Drive.stop();
+void btnL1() {
+    exit;
 }
 
 //loop while killswitch variable (panic) is false
 int main () {
-    while(panic == false) {
-        if(Controller.ButtonA.pressing()) {
-            btnA();
-        }
-        if(Controller.ButtonB.pressing()) {
-            btnB();
-        }
-        if(Controller.ButtonY.pressing()) {
-            btnY();
-        }
-        if(Controller.ButtonX.pressing()) {
-            btnX();
-        }
-        if(Controller.ButtonR1.pressing()) {
-            btnR1();
-        }
+    while(true) {
+        
     }
 }
